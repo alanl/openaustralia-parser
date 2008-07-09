@@ -92,11 +92,11 @@ answers-content =
 pid-type = xsd:string { pattern = "a?.[0-9]+W\.[0-9]+/[0-9]+" }
 colnum-type = xsd:string { pattern = "[0-9]+W" }
 # Will match a wide variety of different link types including old and new
-flexible-answers-id-type = xsd:string { pattern = "uk.org.publicwhip/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\..+" }
-new-answers-major-heading-id-type = xsd:string { pattern = "uk.org.publicwhip/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.mh" }
-new-answers-minor-heading-id-type = xsd:string { pattern = "uk.org.publicwhip/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.h" }
-new-answers-question-id-type = xsd:string { pattern = "uk.org.publicwhip/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.q0" }
-new-answers-reply-id-type = xsd:string { pattern = "uk.org.publicwhip/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.r0" }
+flexible-answers-id-type = xsd:string { pattern = "org.openaustralia/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\..+" }
+new-answers-major-heading-id-type = xsd:string { pattern = "org.openaustralia/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.mh" }
+new-answers-minor-heading-id-type = xsd:string { pattern = "org.openaustralia/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.h" }
+new-answers-question-id-type = xsd:string { pattern = "org.openaustralia/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.q0" }
+new-answers-reply-id-type = xsd:string { pattern = "org.openaustralia/wrans/[0-9]{4}-[0-9]{2}-[0-9]{2}a?\.[0-9]+\.r0" }
 
-member-id-type = xsd:string { pattern = "uk.org.publicwhip/(member|lord)/[0-9]+" } | "uk.org.publicwhip/royal/-1"
+member-id-type = xsd:string { pattern = "org.openaustralia/(member|senator)/[0-9]+" } | "org.openaustralia/royal/-1"
 

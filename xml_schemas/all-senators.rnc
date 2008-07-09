@@ -1,19 +1,19 @@
 element publicwhip {
-	element member {
+	element senator {
 		attribute fromwhy { "general_election" | "changed_party" | "by_election" | "reinstated" },
 		attribute lastname { text },
 		attribute todate { xsd:date },
 		attribute title { text },
 		attribute towhy { "general_election" | "still_in_office" | "died" | "changed_party" | "general_election_standing" |
-			"general_election_not_standing" | "disqualified" | "resigned" | "declared_void" | "became_senator" },
+			"general_election_not_standing" | "disqualified" | "resigned" | "declared_void" | "became_member" },
 		attribute firstname { text },
 		attribute fromdate { xsd:date },
-		attribute house { "representatives" },
+		attribute house { "senate" },
 		attribute party { text },
 		attribute electorate { text },
-		attribute state_territory { "NSW" | "VIC" | "ACT" | "NT" | "TAS" | "WA" | "SA" | "QLD" },
+		attribute state-territory { "NSW" | "VIC" | "ACT" | "NT" | "TAS" | "WA" | "SA" | "QLD" },
 		attribute id {
-			xsd:string { pattern = "org.openaustralia/member/[0-9]+" }
+			xsd:string { pattern = "org.openaustralia/senator/[0-9]+" }
 		}
 	}+
 }

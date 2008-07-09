@@ -1,12 +1,12 @@
 element publicwhip {
 	element person {
 		attribute id {
-			xsd:string { pattern = "uk.org.publicwhip/person/[0-9]+" }
+			xsd:string { pattern = "org.openaustralia/person/[0-9]+" }
 		},
 		attribute latestname { text },
 		element office {
 			attribute id {
-				xsd:string { pattern = "uk.org.publicwhip/((lord|member|moffice)/[0-9]+|royal/-1)" }
+				xsd:string { pattern = "org.openaustralia/((senator|member|moffice)/[0-9]+|royal/-1)" }
 			},
 			attribute current { "yes" }?
 		}+
