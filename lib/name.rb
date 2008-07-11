@@ -158,8 +158,11 @@ class Name
       else
         # first.size >= name.first.size
         first_name_shortened_forms = {
+		  "Albert" => "Alby", # for Alby Schulz
           "Alexander" => "Alex",
           "Anthony" => "Tony",
+		  "Antonio" => "Tony",   # for antonia zappia 
+		  "Antony" => "Tony",		# for Antony windsor	
           "Archibald" => "Arch",
           "Bernard" => "Bernie",
           "Christine" => "Chris",
@@ -171,12 +174,14 @@ class Name
           "Gregory" => "Greg",
           "James" => "Jim",
           "Jennifer" => "Jenny",
+		  "Jonathan" => "Jon",   # for Jonathan Sullivan
           "Joseph" => "Joe",
           "Judith" => "Judi",
           "Kathryn" => "Kathy",
           "Lawrence" => "Larry",
           "Malcolm" => "Mal",
           "Michael" => "Mike",
+		  "Mitchell" => "Mitch", 
           "Nicholas" => "Nick",
           "Patricia" => "Trish",
           "Patrick" => "Pat",
@@ -186,8 +191,12 @@ class Name
           "Rodney" => "Rod",
           "Ronald" => "Ron",
           "Susan" => "Sue",
+		  "Suzanne" => "Sue",
+		  "Stephen" => "Steve",
+		  "Steven" => "Steve",
           "Timothy" => "Tim",
-          "William" => "Bill"
+          "William" => "Bill",
+		  		  
           }
         first_name_shortened_forms.detect {|p| first == p[0] && name.first == p[1]}
       end
