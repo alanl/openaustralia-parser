@@ -22,6 +22,7 @@ former_members_house_and_senate_url: "http://parlinfoweb.aph.gov.au/piweb/browse
 
 # Alternative version of biography pages for current house members
 alternative_current_house_members_url: "http://www.aph.gov.au/house/members/mi-alpha.asp"
+alternative_current_senate_members_url: "http://www.aph.gov.au/senate/senators/homepages/index.asp"
 
 # List of electorates from website for the ABC's Q&A programme
 qanda_electorate_url: "http://www.abc.net.au/tv/qanda/find-your-local-mp-by-electorate.htm"
