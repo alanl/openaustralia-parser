@@ -10,7 +10,7 @@ class Person
   reset_id_counter
   
   def id
-    "uk.org.publicwhip/person/#{@person_count}"
+    "org.openaustralia/person/#{@person_count}"
   end
   
   def initialize(name, override_person_count = nil, birthday = nil)

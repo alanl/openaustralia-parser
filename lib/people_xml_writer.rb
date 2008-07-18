@@ -37,8 +37,8 @@ class PeopleXMLWriter
       people.each do |person|
         person.house_periods.each do |period|
           x.member(:id => period.id,
-            :house => "commons", :title => period.person.name.title, :firstname => period.person.name.first,
-            :lastname => period.person.name.last, :constituency => period.division, :party => period.party,
+            :house => "representatives", :title => period.person.name.title, :firstname => period.person.name.first,
+            :lastname => period.person.name.last, :electorate => period.division, :state_territory => period.state, :party => period.party,
             :fromdate => period.from_date, :todate => period.to_date, :fromwhy => period.from_why, :towhy => period.to_why)
         end
       end
@@ -53,9 +53,9 @@ class PeopleXMLWriter
     x.publicwhip do
       people.each do |person|
         person.senate_periods.each do |period|
-          x.lord(:id => period.id,
-            :house => "lords", :title => period.person.name.title, :forenames => period.person.name.first,
-            :lordname => period.person.name.last, :lordofname => period.state, :affiliation => period.party,    
+          x.senator(:id => period.id,
+            :house => "senate", :title => period.person.name.title, :firstname => period.person.name.first,
+            :lastname => period.person.name.last, :state_territory => period.state, :party => period.party,    
             :fromdate => period.from_date, :todate => period.to_date, :fromwhy => period.from_why, :towhy => period.to_why)
         end
       end

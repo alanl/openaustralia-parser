@@ -31,13 +31,13 @@ end
 
 class HouseSpeech < SpeechBase
   def id
-    "uk.org.publicwhip/debate/#{@date}.#{@major_count}.#{@minor_count}"
+    "org.openaustralia/debate/#{@date}.#{@major_count}.#{@minor_count}"
   end
 end
 
 class SenateSpeech < SpeechBase
   def id
-    "uk.org.publicwhip/lords/#{@date}.#{@major_count}.#{@minor_count}"
+    "org.openaustralia/senate/#{@date}.#{@major_count}.#{@minor_count}"
   end
 end
 

@@ -38,11 +38,7 @@ class PeopleCSVReader
       start_date = parse_date(start_date)
       end_date = parse_end_date(end_date)
       start_reason = parse_start_reason(start_reason)
-      valid_states = ["NSW", "Tasmania", "WA", "Queensland", "Victoria", "SA", "NT", "ACT"]
-      state = "Tasmania" if state == "Tas." || state == "Tas"
-      state = "Victoria" if state == "Vic." || state == "Vic"
-      state = "Queensland" if state == "Qld" || state == "QLD"
-      throw "State #{state} is not a valid. Allowed values are #{valid_states.join(', ')}" unless valid_states.member?(state)
+      state = parse_state(state)
       name = Name.new(:last => lastname, :first => firstname, :middle => middlename,
         :nick => nickname, :title => title, :post_title => post_title)
       throw "Division is undefined for #{name.full_name}" if house == "representatives" && division.nil?
@@ -131,6 +127,31 @@ class PeopleCSVReader
       throw "Unrecognised party: #{party}"
     end
   end
+  
+  def PeopleCSVReader.parse_state(state)
+	valid_states = ["NSW", "TAS", "WA", "QLD", "VIC", "SA", "NT", "ACT"]
+    case state
+    when "NSW"
+      "NSW"
+    when "TAS", "Tas.", "Tasmania", "Tas"
+      "TAS"
+    when "WA"
+      "WA"
+    when "QLD", "Queensland", "Qld.", "Qld"
+      "QLD"
+    when "VIC", "Vic.", "Victoria", "Vic"
+      "VIC"
+    when "SA"
+      "SA"
+    when "NT"
+      "NT"
+    when "ACT"
+      "ACT"
+     else
+      throw "State #{state} is not a valid. Allowed values are #{valid_states.join(', ')}"
+    end
+  end  
+ 
   
   # text is in day.month.year form (all numbers)
   def PeopleCSVReader.parse_date(text)

@@ -32,7 +32,7 @@ class MinisterPosition < PeriodBase
   reset_id_counter
   
   def id
-    "uk.org.publicwhip/moffice/#{@minister_count}"
+    "org.openaustralia/moffice/#{@minister_count}"
   end
   
   def initialize(params)
@@ -57,9 +57,9 @@ class Period < PeriodBase
   
   def id
     if senator?
-      "uk.org.publicwhip/lord/#{@count}"
+      "org.openaustralia/senator/#{@count}"
     else
-      "uk.org.publicwhip/member/#{@count}"
+      "org.openaustralia/member/#{@count}"
     end
   end
   

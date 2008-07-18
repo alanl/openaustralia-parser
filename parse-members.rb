@@ -67,7 +67,7 @@ people.each do |person|
 end
 
 puts "Writing XML..."
-people.write_xml("#{conf.members_xml_path}/people.xml", "#{conf.members_xml_path}/all-members.xml", "#{conf.members_xml_path}/peers-ucl.xml",
+people.write_xml("#{conf.members_xml_path}/people.xml", "#{conf.members_xml_path}/all-members.xml", "#{conf.members_xml_path}/all-senators.xml",
   "#{conf.members_xml_path}/ministers.xml")
 
 # And load up the database
